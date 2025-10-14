@@ -62,10 +62,10 @@ graph TD
 
 ### 🧑‍💻 팀원 소개
 
-|                         손지원                         | 김민성 |                          이규경                           |                          이진배                          |       현금비        |
-|:---------------------------------------------------:|:---:|:------------------------------------------------------:|:-----------------------------------------------------:|:----------------:|
-|  |     |  |  |                  |
-|                   팀장<br>PM<br>발표                    | 참여  |               데이터 엔지니어<br>대시보드 개발               |                    고문                   | 데이터 찾기<br>PPT 제작 |
+| 손지원 | 김민성 | 이규경 | 이진배 | 현금비 |
+|:---:|:---:|:---:|:---:|:---:|
+| <img src="src/pic/Yuri.png" width="120" alt="손지원"/> | <img src="src/pic/Manggu.png" width="120" alt="김민성"/> | <img src="src/pic/Cheolsu.png" width="120" alt="이규경"/> | <img src="src/pic/Hoonee.png" width="120" alt="이진배"/> | <img src="src/pic/Suji.png" width="120" alt="현금비"/> |
+| 팀장<br>PM<br>발표 | 참여 | 데이터 엔지니어<br>대시보드 개발 | 고문 | 데이터 찾기<br>PPT 제작 |
 
 <br>
 
@@ -139,12 +139,36 @@ graph TD
 
 ### 💾 2. 데이터 설계
 
--   **데이터 흐름**: 원천 데이터 (`data/`) → `data_loader` 전처리 → `analysis` 분석 → `app.py` & `ui_components` 시각화
--   **주요 데이터 속성**:
+    -   **데이터 흐름**: 원천 데이터 (`source`) → `scripts/.py` 전처리 → `app.py` 실행-   **주요 데이터 속성**:
     -   `apt_master_df`: 아파트명, 주소, 세대수, 위경도 등
     -   `hourly_congestion_df`: 도로 링크 ID, 시간대별 교통량
     -   `roads_gdf`: 도로 링크 ID, 도로명, geometry (GeoJSON)
     -   `station_df`, `bus_df`: 대중교통 정류장 정보, 승하차 인원
+
+<br>
+
+- **데이터 관계도**
+```mermaid
+graph TD
+    classDef data fill:#E1EFFB,stroke:#90B4D3,stroke-width:2px;
+    classDef model fill:#D5E8D4,stroke:#82B366,stroke-width:2px;
+    classDef central fill:#FFF2CC,stroke:#D6B656,stroke-width:2px;
+
+    Apt[master_data_with_radius.csv<br><b>아파트 정보</b>]:::central
+    Roads[seoul_roads_with_congestion.geojson<br><b>도로망 정보</b>]:::data
+    Congestion[all_traffic_data_for_simulation.csv<br><b>시간별 교통량</b>]:::data
+    Model[speed_prediction_model.joblib<br><b>속도 예측 모델</b>]:::model
+    Price[gu_average_price.csv<br><b>구별 시세</b>]:::data
+    Subway[station_data_final_with_coords.csv<br><b>지하철역 정보</b>]:::data
+    Bus[bus_station_daily_avg_final.csv<br><b>버스정류장 정보</b>]:::data
+
+    Apt -- "반경 내 도로<br>(LINK ID)" --> Roads
+    Roads -- "도로별 교통량<br>(LINK ID)" --> Congestion
+    Congestion -- "입력 데이터" --> Model
+    Apt -- "소속 '구'" --> Price
+    Apt -- "가장 가까운 역<br>(좌표)" --> Subway
+    Apt -- "주변 정류장<br>(좌표)" --> Bus
+```
 
 <br>
 
