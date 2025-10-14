@@ -116,6 +116,7 @@ graph TD
 -   **데이터 처리/분석**: `pandas`, `numpy`, `geopandas`, `scikit-learn`, `joblib`
 -   **시각화/웹 대시보드**: `streamlit`, `plotly`, `folium`
 -   **언어**: `Python`
+-   **AI 모델**: `lightbgm`
 
 ### 4. 예상 문제 및 해결 방안
 
