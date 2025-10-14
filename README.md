@@ -145,11 +145,8 @@ graph TD
 **주요 데이터 속성**:
 <br>
 - `apt_master_df`: 아파트명, 주소, 세대수, 위경도 등
-<br>
 - `hourly_congestion_df`: 도로 링크 ID, 시간대별 교통량
-<br>
 - `roads_gdf`: 도로 링크 ID, 도로명, geometry (GeoJSON)
-<br>
 - `station_df`, `bus_df`: 대중교통 정류장 정보, 승하차 인원
 
 <br>
