@@ -139,8 +139,7 @@ graph TD
 
 ### 💾 2. 데이터 설계
 
--   **데이터 흐름**: 원천 데이터 (`source/`) → `scipts/.py` (전처리) → `app.py` (실행)
--   **주요 데이터 속성**:
+    -   **데이터 흐름**: 원천 데이터 (`source`) → `scripts/.py` 전처리 → `app.py` 실행-   **주요 데이터 속성**:
     -   `apt_master_df`: 아파트명, 주소, 세대수, 위경도 등
     -   `hourly_congestion_df`: 도로 링크 ID, 시간대별 교통량
     -   `roads_gdf`: 도로 링크 ID, 도로명, geometry (GeoJSON)
@@ -169,6 +168,37 @@ graph TD
     Apt -- "소속 '구'" --> Price
     Apt -- "가장 가까운 역<br>(좌표)" --> Subway
     Apt -- "주변 정류장<br>(좌표)" --> Bus
+```
+
+<br>
+
+- **Scripts 데이터 처리 흐름**
+```mermaid
+graph TD
+    classDef script fill:#D5E8D4,stroke:#82B366,stroke-width:2px;
+    classDef output fill:#E1EFFB,stroke:#90B4D3,stroke-width:2px;
+
+    S1["01_filter_apartments.py"]:::script
+    S2["02_process_bus_data.py"]:::script
+    S3["03_process_subway_data.py"]:::script
+    S4["04_calculate_road_capacity.py"]:::script
+    S5["05_create_ml_dataset.py"]:::script
+    S6["06_train_speed_model.py"]:::script
+    S7["07_create_master_data.py"]:::script
+    S8["08_create_geojson.py"]:::script
+    
+    O1["최종 데이터 파일<br><small>e.g., master_data, geojson</small>"]:::output
+    O2["머신러닝 모델<br><small>speed_prediction_model.joblib</small>"]:::output
+
+    S1 --> S7
+    S2 --> S7
+    S3 --> S7
+    S4 --> S5
+    S4 --> S8
+    S5 --> S6
+    S6 --> O2
+    S7 --> O1
+    S8 --> O1
 ```
 
 <br>
