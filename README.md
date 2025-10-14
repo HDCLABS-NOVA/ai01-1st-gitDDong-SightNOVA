@@ -11,6 +11,7 @@ HDC랩스 NOVA 1st-template 레포지토리를 기반으로 작성된 SightNOVA 
 
 **시각적 자료**
 ```mermaid
+%%{init: {'theme': 'transparent'}}%%
 graph TD
     subgraph "1. 기획"
         A1["문제 정의<br><small>재건축 사업성 분석<br>의사결정 지원</small>"]
@@ -18,18 +19,18 @@ graph TD
     end
 
     subgraph "2. 데이터 준비"
-        B1["데이터 수집<br><small>공공데이터, GIS 데이터 등</small>"]
-        B2["데이터 전처리<br><small>결측치 처리, 정제</small>"]
+        B1["데이터 수집<br><small>공공데이터, GIS<br>데이터 등</small>"]
+        B2["데이터 전처리<br><small>결측치 처리<br>데이터 정제</small>"]
     end
 
     subgraph "3. 분석 및 모델링"
-        C1["AI 시뮬레이션<br><small>교통/인프라 영향 예측</small>"]
-        C2["재무 분석<br><small>기대 수익, 비용 계산</small>"]
+        C1["AI 시뮬레이션<br><small>교통/인프라<br>영향 예측</small>"]
+        C2["재무 분석<br><small>기대 수익 및<br>비용 계산</small>"]
     end
 
     subgraph "4. 결과 및 시각화"
         D1["통합 대시보드<br><small>Streamlit 구현</small>"]
-        D2["결과 시각화<br><small>지도, 차트, 보고서</small>"]
+        D2["결과 시각화<br><small>지도, 차트<br>보고서</small>"]
     end
 
     A1 --> A2
