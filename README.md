@@ -155,8 +155,7 @@ graph TD
     classDef model fill:#D5E8D4,stroke:#82B366,stroke-width:2px;
     classDef central fill:#FFF2CC,stroke:#D6B656,stroke-width:2px;
 
-    Apt[master_data_with_radius(3km).csv<br><b>아파트 정보</b>]:::central
-    Roads[seoul_roads_with_congestion.geojson<br><b>도로망 정보</b>]:::data
+수정될 코드: Apt["master_data_with_radius(3km).csv<br><b>아파트 정보</b>"]:::central    Roads[seoul_roads_with_congestion.geojson<br><b>도로망 정보</b>]:::data
     Congestion[all_traffic_data_for_simulation.csv<br><b>시간별 교통량</b>]:::data
     Model[speed_prediction_model.joblib<br><b>속도 예측 모델</b>]:::model
     Price[gu_average_price.csv<br><b>구별 시세</b>]:::data
