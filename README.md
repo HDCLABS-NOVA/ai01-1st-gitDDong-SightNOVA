@@ -62,10 +62,10 @@ graph TD
 
 ### 🧑‍💻 팀원 소개
 
-| 손지원 | 김민성 | 이규경 | 이진배 | 현금비 |
-|:---:|:---:|:---:|:---:|:---:|
-| <img src="source/pic/Yuri.png" width="120" alt="손지원"/> | <img src="source/pic/Manggu.png" width="120" alt="김민성"/> | <img src="source/pic/Cheolsu.png" width="120" alt="이규경"/> | <img src="source/pic/Hoonee.png" width="120" alt="이진배"/> | <img src="source/pic/Suji.png" width="120" alt="현금비"/> |
-| 팀장<br>PM<br>발표 | 참여 | 데이터 엔지니어<br>대시보드 개발 | 고문 | 데이터 찾기<br>PPT 제작 |
+| 손지원 |                           김민성                            | 이규경 |                           이진배                            |                          현금비                           |
+|:---:|:--------------------------------------------------------:|:---:|:--------------------------------------------------------:|:------------------------------------------------------:|
+| <img src="PIC/Yuri.png" width="120" alt="손지원"/> | <img src="PIC/Manggu.png" width="120" alt="김민성"/> | <img src="PIC/Cheolsu.png" width="120" alt="이규경"/> | <img src="PIC/Hoonee.png" width="120" alt="이진배"/> | <img src="PIC/Suji.png" width="120" alt="현금비"/> |
+| 팀장<br>PM<br>발표 |                           개발                             | 데이터 엔지니어<br>대시보드 개발 |                       고문<br>엔지니어링                        |                    데이터 서치<br>PPT 제작                    |
 
 <br>
 
