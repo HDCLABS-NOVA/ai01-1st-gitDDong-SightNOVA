@@ -142,8 +142,7 @@ graph TD
 **데이터 흐름**: 원천 데이터 (`source`) → `scripts/.py` 전처리 → `app.py` 실행
 <br>
 
-**주요 데이터 속성**:
-<br>
+**주요 데이터 속성**:s
 - `apt_master_df`: 아파트명, 주소, 세대수, 위경도 등
 - `hourly_congestion_df`: 도로 링크 ID, 시간대별 교통량
 - `roads_gdf`: 도로 링크 ID, 도로명, geometry (GeoJSON)
