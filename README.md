@@ -113,10 +113,18 @@ graph TD
 
 ### 3. 기술 스택
 
--   **데이터 처리/분석**: `pandas`, `numpy`, `geopandas`, `scikit-learn`, `joblib`
--   **시각화/웹 대시보드**: `streamlit`, `plotly`, `folium`
--   **언어**: `Python`
--   **AI 모델**: `lightbgm`
+-   **Language**:
+    -   `Python`: 데이터 분석, 머신러닝, 웹 개발 전반에 걸쳐 높은 생산성과 방대한 라이브러리 생태계를 제공하여 메인 언어로 채택했습니다.
+-   **Data Processing & Analysis**:
+    -   `pandas` & `numpy`: 테이블 형태의 데이터를 다루고 복잡한 수치 연산을 수행하기 위한 핵심 라이브러리입니다.
+    -   `geopandas`: 공간 데이터를 Pandas DataFrame처럼 쉽게 다룰 수 있게 하여, 도로 및 지역 분석에 활용했습니다.
+-   **AI Model & ML**:
+    -   `scikit-learn` & `joblib`: 머신러닝 모델의 훈련 및 직렬화(저장/로드)를 위해 사용했습니다.
+    -   `lightgbm`: 도로 속도 예측 모델의 기반이 되는 알고리즘으로, 빠르고 효율적인 성능을 제공합니다.
+-   **Dashboard & Visualization**:
+    -   `streamlit`: 복잡한 웹 프레임워크 없이 Python 코드만으로 빠르고 쉽게 인터랙티브 웹 대시보드를 구축하기 위해 사용했습니다.
+    -   `plotly`: 동적이고 미려한 차트와 그래프를 생성하여 분석 결과를 효과적으로 시각화합니다.
+    -   `folium`: `geopandas`로 처리된 공간 데이터를 지도 위에 시각화하여 직관적인 인사이트를 제공합니다.
 
 ### 4. 예상 문제 및 해결 방안
 
